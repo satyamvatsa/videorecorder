@@ -1,3 +1,5 @@
+'use strict';
+
 let startcam = document.querySelector('#startcam');
 let camicon = document.querySelector('#camicon');
 let recordbtn = document.querySelector('#recordbtn');
