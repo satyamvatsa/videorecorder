@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html>
+  <head>
+    <title>Media Recorder in Javascript</title>
+    <link rel="stylesheet" href="main.css" />
     <!-- Google icon -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
@@ -13,8 +11,8 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- note start -->
     <div class="container">
         <div class="row">
@@ -41,59 +39,72 @@
         </div>
       </div>
       <!-- Record and upload start -->
-      <div class="container maindiv">
+      <div class="container">
         <div class="row">
-          <div>
-            <h4>Media Stream Constraints options</h4>
-            <p>
-              Echo cancellation: <input type="checkbox" id="echoCancellation" />
-            </p>
-          </div>
-    
-          <div>
-            <span id="errorMsg"></span>
-          </div>
-            <div class="col-lg-7 videopre">
-                <div class="video">
-                    <video src="" class="recwindow" id="recwindow" playsinline autoplay muted></video>
-                    <video src="" class="prewindow" id="prewindow" playsinline loop></video>
-                    <div class="videobtn">
-                        <button class="startvid" id="startcam">
-                          <span class="material-icons-outlined" id="camicon">
-                          videocam_off
-                          </span>
-                        </button>
-                    </div>
+          <div class="col-lg-7 videopre">
+            <div id="container" class="video">
+              <video id="gum" class="recwindow" playsinline autoplay muted></video>
+              <video id="recorded" class="prewindow" playsinline loop></video>
+              <div class="videobtn">
+                <button id="start" class="startvid">
+                  <span class="material-icons-outlined" id="camicon">
+                      videocam_off
+                  </span>
+                </button>
+              </div>
+            </div>
+              <div class="recordbtn">
+                <button id="record" disabled>Record</button>
+              </div>
+              <div class="secondscreen">
+                <div class="retake">
+                  <button class="retakebtn" disabled>Retake</button>
+                  <button class="playbtn" id="play" disabled>Play</button>
+                  <button class="uploadbtn" id="download" disabled>Download</button>
                 </div>
-                <div class="recordbtn" id="recordbtn">
-                  <button id="recordbutton" disabled>Start Recording</button>
-                </div>
-                <div class="secondscreen">
-                  <div class="retake">
-                    <button class="retakebtn" disabled>Retake</button>
-                    <button class="playbtn" id="playbtn" disabled>
+              </div>
+              <div class="Constraints">
+                <h4>Media Stream Constraints options</h4>
+                <p>
+                  Echo cancellation: <input type="checkbox" id="echoCancellation" />
+                </p>
+              </div>
+
+              <div>
+                <span id="errorMsg"></span>
+              </div>
+            </div>
+
+          <div class="col-lg-5 col-md-12 uploadpre">
+            <div class="choosefile">
+              <form action="">
+                    <label for="upload" id="upload-btn">
                       <span class="material-icons-outlined">
-                      play_arrow
-                      </span>
-                    </button >
-                    <button class="uploadbtn" disabled>Upload</button>
-                  </div>
-                </div>
+                        file_upload
+                        </span>
+                      <span>Choose file</span>
+                    </label>
+                    <input type="file" name="upload" id="upload" class="file-input">
+
+              </form>
             </div>
-            <div class="col-lg-5 col-md-12 uploadpre">
-                <form action="">
-                  <label for="upload" id="upload-btn">
-                    <span class="material-icons-outlined">
-                      file_upload
-                      </span>
-                    <span>Choose file</span>
-                  </label>
-                  <input type="file" name="upload" id="upload">
-                </form>
+            <section class="progress-area"></section>
+            <section class="uploaded-area"></section>
+            <div class="showurl">
+              <div class="urlcopy">
+                <input type="text" value="File link" id="myInput">
+                <button id="copytext">
+                  <span class="material-icons-outlined">
+                  content_copy
+                  </span>
+                </button>
+              </div>
             </div>
+            
+            
+          </div>
         </div>
-      </div>
-      <!-- Record and upload end -->
-</body>
-<script src="script.js"></script>
+        </div>
+  </body>
+  <script src="script.js"></script>
 </html>
