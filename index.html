@@ -43,10 +43,20 @@
       <!-- Record and upload start -->
       <div class="container maindiv">
         <div class="row">
+          <div>
+            <h4>Media Stream Constraints options</h4>
+            <p>
+              Echo cancellation: <input type="checkbox" id="echoCancellation" />
+            </p>
+          </div>
+    
+          <div>
+            <span id="errorMsg"></span>
+          </div>
             <div class="col-lg-7 videopre">
                 <div class="video">
-                    <video src="" class="recwindow" id="recwindow"></video>
-                    <video src="" class="prewindow" id="prewindow"></video>
+                    <video src="" class="recwindow" id="recwindow" playsinline autoplay muted></video>
+                    <video src="" class="prewindow" id="prewindow" playsinline loop></video>
                     <div class="videobtn">
                         <button class="startvid" id="startcam">
                           <span class="material-icons-outlined" id="camicon">
@@ -56,20 +66,19 @@
                     </div>
                 </div>
                 <div class="recordbtn" id="recordbtn">
-                  <button id="recordbutton">Record</button>
+                  <button id="recordbutton" disabled>Start Recording</button>
                 </div>
                 <div class="secondscreen">
                   <div class="retake">
-                    <button class="retakebtn">Retake</button>
-                    <button class="playbtn">
+                    <button class="retakebtn" disabled>Retake</button>
+                    <button class="playbtn" id="playbtn" disabled>
                       <span class="material-icons-outlined">
                       play_arrow
                       </span>
                     </button >
-                    <button class="uploadbtn">Upload</button>
+                    <button class="uploadbtn" disabled>Upload</button>
                   </div>
                 </div>
-                
             </div>
             <div class="col-lg-5 col-md-12 uploadpre">
                 <form action="">

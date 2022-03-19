@@ -79,6 +79,7 @@ button{
     border-radius: 5px;
     padding: 5px 20px;
     color:white;
+    cursor: pointer;
 }
 .uploadbtn{
     background-color: #4353FF;
@@ -86,6 +87,7 @@ button{
     border-radius: 5px;
     padding: 5px 20px;
     color:white;
+    cursor: pointer;
 }
 .playbtn{
     padding: 10px;
@@ -93,6 +95,7 @@ button{
     border-radius: 50%;
     border: solid 0.15rem #4353FF;
     color: #4353FF;
+    cursor: pointer;
 }
 input[type="file"]{
     display: none;
