@@ -237,8 +237,19 @@ margin: 0 20px 20px 0;
     margin-top: 50px;
   }
 }
-
-
+.mobilevideo main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobileupbtn{
+  background-color: #4353FF;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  color:white;
+  cursor: pointer;
+}
 .audiopre{
   display: none;
 }
