@@ -156,6 +156,7 @@ border-radius: 5px;
   background-color: #e78e88;
 }
 .retake{
+  width: 70%;
   display: flex;
   justify-content: space-between;
 }
@@ -176,12 +177,23 @@ border-radius: 5px;
   cursor: pointer;
 }
 .playbtn{
-background-color: #4353FF;
-border: none;
-border-radius: 5px;
+  width: 3rem;
+  height: 3rem;
+background-color:transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+border: solid 0.12rem #4353FF;
+border-radius: 50%;
 padding: 5px 20px;
-color:white;
+color:#4353FF;
 cursor: pointer;
+font-size: 1.5rem;
+}
+.undervideo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .secondscreen{
   display: none;
@@ -207,13 +219,39 @@ margin: 0 0 20px 0;
 video#gumVideo {
 margin: 0 20px 20px 0;
 }
-
+.videopre .recordedlink{
+  display: none;
+}
+#processing{
+  color:white;
+  position: absolute;
+  display: none;
+}
 
 /* Mobile recording */
+@media only screen and (max-width: 600px) {
+  .uploadpre span{
+    font-size: 1.5rem;
+  }
+  .choosefile{
+    margin-top: 50px;
+  }
+}
+
 
 .audiopre{
   display: none;
 }
 .videowin{
   display: none;
+}
+#myform{
+  display: flex;
+  justify-content: center;
+}
+#mobilebtn{
+  background-color: #eb4034;
+  justify-content: center;
+  width: 50%;
+  font-size: 1.5rem;
 }

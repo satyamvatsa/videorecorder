@@ -21,6 +21,8 @@ let videobtn = document.querySelector('.videobtn');
 let retake = document.querySelector('.retakebtn');
 let startvid = document.querySelector('.startvid');
 let icon = document.querySelector('.startvid span');
+let recordedlink = document.querySelector('.videopre .recordedlink');
+let processing = document.querySelector('#processing');
 
 startvid.addEventListener('click',() => {
   icon.textContent="videocam";
@@ -67,6 +69,9 @@ downloadButton.addEventListener('click', () => {
   const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
   const url = window.URL.createObjectURL(blob);
   const a = document.createElement('a');
+  recordedlink.style.display="block";
+  processing.style.display="block";
+  secondscreen.style.display="none";
   a.style.display = 'none';
   a.href = url;
   a.download = 'test.mp4';
@@ -265,6 +270,8 @@ document.addEventListener('DOMContentLoaded', (ev)=>{
           let videowin = document.querySelector('.videowin');
           video.src=window.URL.createObjectURL(input.files[0]);
           videowin.style.display="block";
+          form.style.display="none";
+          uploadpre.style.display="none";
       }
   })
   

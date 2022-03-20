@@ -44,7 +44,7 @@
           <div class="col-md-12 d-lg-none mobilevideo">
             <main>
               <form action="#" id="myform" enctype="multipart/form-data">
-                  <label for="capture">Record Video</label>
+                  <label for="capture" id="mobilebtn">Record Video</label>
                   <input type="file" id="capture" accept="video/*,audio/*" capture/>
               </form>
               <p class="audiopre">
@@ -56,26 +56,49 @@
           </main>
           </div>
           <div class="col-lg-7 d-none d-lg-block videopre">
+            <div class="recordedlink">
+              <div class="urlcopy">
+                <input type="text" value="File link" id="myInput">
+                <button id="copytext">
+                  <span class="material-icons-outlined">
+                  content_copy
+                  </span>
+                </button>
+              </div>
+            </div>
+            
             <div id="container" class="video">
-              <video id="gum" class="recwindow" playsinline autoplay muted></video>
+              
+                <video id="gum" class="recwindow" playsinline autoplay muted></video>
               <video id="recorded" class="prewindow" playsinline loop></video>
+              <div id="processing">
+                <p>Processing</p>
+              </div>
               <div class="videobtn">
+                
                 <button id="start" class="startvid">
                   <span class="material-icons-outlined" id="camicon">
                     videocam_off
                   </span>
                 </button>
+              
               </div>
+              
             </div>
               <div class="recordbtn">
                 <button id="record" disabled>Record</button>
               </div>
               <div class="secondscreen">
-                <div class="retake">
-                  <button class="retakebtn" disabled>Retake</button>
-                  <button class="playbtn" id="play" disabled>Play</button>
-                  <button class="uploadbtn" id="download" disabled>Download</button>
+                <div class="undervideo">
+                  <div class="retake">
+                    <button class="retakebtn" disabled>Retake</button>
+                    <button class="playbtn" id="play" disabled><span class="material-icons-outlined">
+                      play_arrow
+                      </span></button>
+                    <button class="uploadbtn" id="download" disabled>Upload</button>
+                  </div>
                 </div>
+                
               </div>
               <div class="Constraints">
                 <h4>Media Stream Constraints options</h4>
@@ -99,7 +122,6 @@
                       <span>Choose file</span>
                     </label>
                     <input type="file" name="upload" id="upload" class="file-input">
-
               </form>
             </div>
             <section class="progress-area"></section>
