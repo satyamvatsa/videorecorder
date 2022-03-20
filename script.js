@@ -19,6 +19,14 @@ let heading = document.querySelector('.heading');
 let prewindow = document.querySelector('.prewindow');
 let videobtn = document.querySelector('.videobtn');
 let retake = document.querySelector('.retakebtn');
+let startvid = document.querySelector('.startvid');
+let icon = document.querySelector('.startvid span');
+
+startvid.addEventListener('click',() => {
+  icon.textContent="videocam";
+  startvid.style.backgroundColor="transparent";
+});
+
 
 retake.addEventListener('click',() => {
     window.location.reload()
@@ -236,3 +244,28 @@ function myFunction() {
   /* Alert the copied text */
   alert("Copied the text: " + copyText.value);
 }
+
+
+
+/* Mobile video */
+
+document.addEventListener('DOMContentLoaded', (ev)=>{
+  let form = document.getElementById('myform');
+  //get the captured media file
+  let input = document.getElementById('capture');
+  
+  input.addEventListener('change', (ev)=>{
+      console.dir( input.files[0] );
+      if(input.files[0].type.indexOf("audio/") > -1 ){
+          let audio = document.getElementById('audio');
+          audio.src = window.URL.createObjectURL(input.files[0]);
+      }
+      else if(input.files[0].type.indexOf("video/") > -1 ){
+          let video = document.getElementById('video');
+          let videowin = document.querySelector('.videowin');
+          video.src=window.URL.createObjectURL(input.files[0]);
+          videowin.style.display="block";
+      }
+  })
+  
+})

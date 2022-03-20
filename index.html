@@ -41,14 +41,28 @@
       <!-- Record and upload start -->
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 videopre">
+          <div class="col-md-12 d-lg-none mobilevideo">
+            <main>
+              <form action="#" id="myform" enctype="multipart/form-data">
+                  <label for="capture">Record Video</label>
+                  <input type="file" id="capture" accept="video/*,audio/*" capture/>
+              </form>
+              <p class="audiopre">
+                <audio src="" id="audio" controls></audio>
+              </p>
+              <p class="videowin">
+                <video src="" id="video" controls></video>
+              </p>
+          </main>
+          </div>
+          <div class="col-lg-7 d-none d-lg-block videopre">
             <div id="container" class="video">
               <video id="gum" class="recwindow" playsinline autoplay muted></video>
               <video id="recorded" class="prewindow" playsinline loop></video>
               <div class="videobtn">
                 <button id="start" class="startvid">
                   <span class="material-icons-outlined" id="camicon">
-                      videocam_off
+                    videocam_off
                   </span>
                 </button>
               </div>
