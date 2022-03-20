@@ -72,6 +72,7 @@ downloadButton.addEventListener('click', () => {
   recordedlink.style.display="block";
   processing.style.display="block";
   secondscreen.style.display="none";
+  prewindow.style.display="none";
   a.style.display = 'none';
   a.href = url;
   a.download = 'test.mp4';
@@ -268,10 +269,12 @@ document.addEventListener('DOMContentLoaded', (ev)=>{
       else if(input.files[0].type.indexOf("video/") > -1 ){
           let video = document.getElementById('video');
           let videowin = document.querySelector('.videowin');
+          let showmobileupload = document.querySelector('.showmobileupload');
           video.src=window.URL.createObjectURL(input.files[0]);
           videowin.style.display="block";
           form.style.display="none";
           uploadpre.style.display="none";
+          showmobileupload.style.display="block";
       }
   })
   

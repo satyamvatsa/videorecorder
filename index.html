@@ -54,29 +54,38 @@
                 <video src="" id="video" controls></video>
               </p>
           </main>
-          <div class="mobileupload">
-            <button class="mobileupbtn" id="mobileupbtn" disabled>Upload</button>
+          <div class="showmobileupload">
+            <div class="mobileupload">
+              <button class="mobileupbtn" id="mobileupbtn" disabled>Upload</button>
+            </div>
           </div>
+          
           </div>
           <div class="col-lg-7 d-none d-lg-block videopre">
             <div class="recordedlink">
-              <div class="urlcopy">
-                <input type="text" value="File link" id="myInput">
-                <button id="copytext">
-                  <span class="material-icons-outlined">
-                  content_copy
-                  </span>
-                </button>
+              <div class="lastscreen">
+                <div class="urlcopy">
+                  <input type="text" value="File link" id="myInput">
+                  <button id="copytext">
+                    <span class="material-icons-outlined">
+                    content_copy
+                    </span>
+                  </button>
+                </div>
+                <div id="processing">
+                  <p>Processing</p>
+                </div>
               </div>
+              
+              
             </div>
+            
             
             <div id="container" class="video">
               
-                <video id="gum" class="recwindow" playsinline autoplay muted></video>
+              <video id="gum" class="recwindow" playsinline autoplay muted></video>
               <video id="recorded" class="prewindow" playsinline loop></video>
-              <div id="processing">
-                <p>Processing</p>
-              </div>
+              
               <div class="videobtn">
                 
                 <button id="start" class="startvid">

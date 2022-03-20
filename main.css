@@ -222,9 +222,16 @@ margin: 0 20px 20px 0;
 .videopre .recordedlink{
   display: none;
 }
+
 #processing{
+  width: 50%;
+  height: 250px;
+  margin-top: 40px;
+  background-color: black;
   color:white;
-  position: absolute;
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
   display: none;
 }
 
@@ -237,10 +244,13 @@ margin: 0 20px 20px 0;
     margin-top: 50px;
   }
 }
-.mobilevideo main{
+
+.mobileupload{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+}
+.showmobileupload{
+  display: none;
 }
 .mobileupbtn{
   background-color: #4353FF;
