@@ -1,80 +1,162 @@
-.note p{
+
+.blockquote p{
     background-color: #DFE2FE;
+    padding: 10px;
+    margin: 10px;
     border-radius: 5px;
-    position: relative;
-    text-align: center;
-    top:10px;
-    padding: 5px 25px;
+    font-size: medium;
+}
+.bg-light{
+    background-color: transparent !important;
+}
+@media only screen and (max-width: 600px) {
+    .navbar-brand img {
+        height: 60px !important;
+    }
+    .mobilerecoder{
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fileupload{
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .desktoprecorder{
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .heading h2{
+        font-size:large;
+    }
+    .heading{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .fileupload{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .uploadsection{
+        border-left: solid 0.12rem #868686;
+        line-height: 10px;
+    }
+    .heading{
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.mediastream{
+    display: none;
+}
+.errorMsg{
+    display: none;
 }
 
-.logo img{
-    width: 200px;
-}
-.heading{
-    padding: 50px;
+.choosefile div{
     display: flex;
-    justify-content: center;
-}
-.maindiv{
-    
-}
-.uploadpre{
-    border-left: solid 1px #868686;
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-.video{
-    display: flex;
     justify-content: center;
-    align-items: flex-end;
+}
+.choosefile span{
+    font-size: 3rem;
+}
+
+
+.form-group{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+input[type=file]{
+    display: none;
+}
+.desktoprecorder{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.desktoprecordbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
 }
-.videobtn{
-    position: absolute;
-
+.desktopvideo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.btn-primary{
+    background-color: #EB4034;
+    border-color: #EB4034;
+}
+.btn-primary:disabled{
+    background-color: #e28079;
+    border-color: #e28079;
+}
+.btn-primary:hover{
+    background-color: #ce3025;
+    border-color: #ce3025;
 }
 video{
     background-color: black;
+    width: 90%;
     border-radius: 5px;
-    width: 75%;
 }
-button{
-    display: flex;
-    justify-content: center;
+label{
+    background-color: #4353FF;
+    color: white;
+    display: flex !important;
     align-items: center;
+    height: 6rem;
+    border-radius: 5px;
+    padding: 0 25px;
+    cursor: pointer;
+}
+.mobilerecoder label{
+    background-color: #EB4034;
 }
 .startvid{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
     padding: 10px;
     background-color: #eb4034;
-    border-radius: 50%;
     border: solid 0.12rem white;
     color: white;
     margin: 10px;
-}
-.prewindow{
-    display: none;
-}
-.recordbtn{
     display: flex;
     justify-content: center;
-}
-.recordbtn button{
-    background-color: #eb4034;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 20px;
-    color:white;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .retake{
     display: flex;
     justify-content: space-between;
+    
+}
+#recorded{
+    display: none;
 }
 .secondscreen{
     display: none;
 }
 .retakebtn{
-    background-color: #4353FF;
+    background-color: #4353FF !important;
     border: none;
     border-radius: 5px;
     padding: 5px 20px;
@@ -82,7 +164,7 @@ button{
     cursor: pointer;
 }
 .uploadbtn{
-    background-color: #4353FF;
+    background-color: #4353FF !important;
     border: none;
     border-radius: 5px;
     padding: 5px 20px;
@@ -90,23 +172,89 @@ button{
     cursor: pointer;
 }
 .playbtn{
-    padding: 10px;
     background-color: transparent;
-    border-radius: 50%;
     border: solid 0.15rem #4353FF;
-    color: #4353FF;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    padding: 5px 5px;
+    color:#4353FF;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-input[type="file"]{
+.progressbar{
+    background-color: #DFE2FE;
+    height: 50px;
+    width: 50%;
+    margin: auto;
     display: none;
 }
-label{
-    background-color: #4353FF;
-    color: white;
+.copyandprocess{
+    display: none;
+}
+.maincont{
+    
+}
+.processedvideo button{
+    background-color: #4353FF !important;
+    border-color: #4353FF;
+}
+.processedvideo button:hover{
+    background-color: #4353FF !important;
+    border-color: #4353FF;
+}
+.processedvideo{
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 60px;
+    padding: 10px;
+    
+}
+.processedvideobtn{
+    display: none;
+}
+.processing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.processing p{
+    position: absolute;
+    color: white;
+}
+.uploadsection{
+    
+}
+.urlcopy{
+    background-color: #cfcfcf;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
     border-radius: 5px;
-    padding: 0 25px;
-    cursor: pointer;
+    margin-top: 20px;
+  }
+  .showurl{
+    display: none;
+  }
+  .urlcopy input{
+    width: 20rem;
+    background-color: transparent;
+    border: none;
+    outline:none;
+  }
+  .urlcopy button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+  }
+.copycontent{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #D7DAFF;
+    top: 10px;
 }
