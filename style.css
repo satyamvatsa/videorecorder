@@ -1,4 +1,45 @@
-
+/* nointernet page */ 
+.img img{
+    width: 20%;
+    margin: auto;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copy{
+    text-align: center;
+}
+.nointernet{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.videopage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.previewvideo{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.previewvideo button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    background-color: transparent;
+    border-radius: 50%;
+}
 .blockquote p{
     background-color: #DFE2FE;
     padding: 10px;
@@ -9,9 +50,40 @@
 .bg-light{
     background-color: transparent !important;
 }
+.mobileaudio{
+    display: none;
+    margin: auto;
+}
+.mobilevideo{
+    display: none;
+    vertical-align: middle;
+}
+.mobilebtn{
+    display: none;
+}
+.mobilebtnalign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobilepreview{
+    margin-top: 50px;
+    
+}
+  .mobilebtnalign button{
+    margin-top: 5px;
+}
 @media only screen and (max-width: 600px) {
+    .blockquote{
+        display: none;
+    }
     .navbar-brand img {
         height: 60px !important;
+    }
+    .mobileupload{
+        background-color: #4353FF !important;
+        border-color: #4353FF !important;
+        margin: 5px;
     }
     .mobilerecoder{
         height: 30vh;
@@ -19,6 +91,7 @@
         align-items: center;
         justify-content: center;
     }
+    
     .fileupload{
         height: 30vh;
         display: flex;
@@ -38,6 +111,13 @@
         padding: 10px;
         display: flex;
         justify-content: center;
+    }
+    .progressbar{
+        display: none;
+    }
+    .processedvideobtn{
+        display: none;
+        margin: 5px;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -186,7 +266,7 @@ label{
 
 }
 .progressbar{
-    background-color: #DFE2FE;
+    
     height: 50px;
     width: 50%;
     margin: auto;
@@ -211,20 +291,24 @@ label{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    
 }
 .processedvideobtn{
     display: none;
 }
+
 .processing{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
+    padding: 10px;
 }
+
 .processing p{
     position: absolute;
     color: white;
 }
+
 .uploadsection{
     
 }
@@ -258,3 +342,53 @@ label{
     background-color: #D7DAFF;
     top: 10px;
 }
+
+.progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+  }
+  .progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+  }
+  .progress-area .content .progress-bar{
+    height: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+    background: #D7DAFF;
+    border-radius: 30px;
+  }
+  .content .progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #6990F2;
+    border-radius: inherit;
+  }
+  .uploaded-area{
+    max-height: 232px;
+    overflow-y: scroll;
+  }
+  .uploaded-area.onprogress{
+    max-height: 150px;
+  }
+  .uploaded-area::-webkit-scrollbar{
+    width: 0px;
+  }
+  .uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+  }
+  .uploaded-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+  }
+  .uploaded-area .row .details .size{
+    color: #404040;
+    font-size: 11px;
+  }
+  .uploaded-area i.fa-check{
+    font-size: 16px;
+  }

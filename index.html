@@ -37,16 +37,84 @@
         </div>
     </div>
     <div class="container">
+    <div class="progressbar">
+        <section class="progress-area"></section>
+        <section class="uploaded-area"></section>
+    </div>
+    <div class="container-fluid copyandprocess">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="showurl">
+                    <div class="urlcopy">
+                        <input type="text" value="https://storage.googleapis.com/tal_interview_app_videos/video_282101918.mp4" id="myInput">
+                        <button id="copytext">
+                        <span class="material-icons-outlined">
+                        content_copy
+                        </span>
+                        </button>
+                    </div>
+                    </div>
+                <div class="col-lg-12 copycontent">
+                    <p>You can copy the URL of the video and close the page. Waiting for Video processing is optional.</p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="processing">
+                    <p>processing</p>
+                    <video src=""></video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="processedvideobtn">
+        <div class="processedvideo">
+            <button type="button" class="btn btn-primary">View processed video</button>
+        </div>
+    </div>
+</div>
+    <div class="container recordandupload">
         <div class="row align-items-center ">
             <div class="col-lg-12 d-md-none mobilerecoder">
-                <form>
-                    <div class="form-group ">
-                        <form action="#" id="myform" enctype="multipart/form-data">
-                            <label for="capture" id="mobilebtn">Record Video</label>
-                            <input type="file" class="form-control-file" id="capture" accept="video/*,audio/*" capture/>
-                        </form>
+                
+                
+                
+                <div class="mainmobilerecorder">
+                    <form>
+                        <div class="form-group">
+                            <form action="#" id="myform" enctype="multipart/form-data">
+                                <label for="capture" id="mobilebtn">
+                                    <div class="container-fluid choosefile">
+                                        <div class="col-lg-12">
+                                            <span class="material-icons-outlined">
+                                                videocam
+                                            </span>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            Record Video
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="file" class="form-control-file" id="capture" accept="video/mp4,video/x-m4v,video/*" capture/>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+                <div class="mobilepreview">
+                    <div class="mobileaudio">
+                        <audio src="" id="audio" controls></audio>
                     </div>
-                </form>
+                    <div class="mobilevideo">
+                        <video src="" id="video" controls></video>
+                    </div>
+                    <div class="mobilebtn">
+                        <div class="container-fluid mobilebtnalign">
+                            <div class="">
+                                <button class="btn btn-primary mobileupload">Upload</button><br>
+                                <button class="btn btn-primary retakebtn">Retake</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block" id="mainrecord">
                 <div class="mediastream">
@@ -58,38 +126,8 @@
                 <div class="errorMsg">
                     <span id="errorMsg"></span>
                 </div>
-                <div class="progressbar">
-                    <p>progressbar</p>
-                </div>
-                <div class="container-fluid copyandprocess">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="urlcopy">
-                                <input type="text" value="https://storage.googleapis.com/tal_interview_app_videos/video_282101918.mp4" id="myInput">
-                                <button id="copytext">
-                                    <span class="material-icons-outlined">
-                                        content_copy
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="col-lg-12 copycontent">
-                                <p>You can copy the URL of the video and close the page. Waiting for Video processing is optional.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="processing">
-                                <p>processing</p>
-                                <video src=""></video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="processedvideobtn">
-                    <div class="processedvideo">
-                        <button type="button" class="btn btn-primary">View processed video</button>
-                    </div>
-                </div>
                 
+
                 <div class="desktoprecorder">
                     <div class="container-fluid">
                         <div class="col-lg-12 desktopvideo">
@@ -120,18 +158,20 @@
             </div>
             <div class="col-lg-5 uploadsection">
                 <div class="progressbar">
-                        
+                    progressbar
                 </div>
                 <div class="container-fluid copyandprocess">
                     <div class="row">
                         <div class="col-lg-7">
-                            <div class="urlcopy">
-                                <input type="text" value="https://storage.googleapis.com/tal_interview_app_videos/video_282101918.mp4" id="myInput">
-                                <button id="copytext">
+                            <div class="showurl">
+                                <div class="urlcopy">
+                                    <input type="text" value="https://storage.googleapis.com/tal_interview_app_videos/video_282101918.mp4" id="myInput">
+                                    <button id="copytext">
                                     <span class="material-icons-outlined">
-                                        content_copy
+                                    content_copy
                                     </span>
-                                </button>
+                                    </button>
+                                </div>
                             </div>
                             <div class="col-lg-12 copycontent">
                                 <p>You can copy the URL of the video and close the page. Waiting for Video processing is optional.</p>
@@ -153,9 +193,9 @@
                 <div class="fileupload">
                     <div class="container-fuild">
                         <div class="col-lg-12">
-                            <form>
+                            <form action="" id="uploadform">
                                 <div class="form-group">
-                                    <label for="exampleFormControlFile1">
+                                    <label for="upload" id="upload-btn">
                                         <div class="container-fluid choosefile">
                                             <div class="col-lg-12">
                                                 <span class="material-icons-outlined">
@@ -167,14 +207,12 @@
                                             </div>
                                         </div>
                                     </label>
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    <input type="file" name="upload" id="upload" class="form-control-file file-input">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                
-                
             </div>
         </div>
     </div>
