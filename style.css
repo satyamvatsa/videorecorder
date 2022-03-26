@@ -73,6 +73,11 @@
   .mobilebtnalign button{
     margin-top: 5px;
 }
+.heading{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
 @media only screen and (max-width: 600px) {
     .blockquote{
         display: none;
@@ -392,3 +397,101 @@ label{
   .uploaded-area i.fa-check{
     font-size: 16px;
   }
+
+
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+/* counter modal */
+#counter {
+    text-align: center;
+}
+.countercontent h1{
+    font-size: 8rem;
+    color:white;
+    font-weight: bold;
+}
+.countercontent{
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+/* Styling modal */
+#counter:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.counterdialog {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#counter .countercontent {
+    padding: 20px 20px 20px 20px;
+    -webkit-animation-name: modal-animation;
+    -webkit-animation-duration: 0.5s;
+    animation-name: modal-animation;
+    animation-duration: 0.5s;
+}
+
+@-webkit-keyframes modal-animation {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes modal-animation {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}

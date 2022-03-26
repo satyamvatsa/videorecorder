@@ -17,6 +17,21 @@
     <title>Talent Sumo</title>
 </head>
 <body>
+
+    <!-- counter Modal Starts-->
+    <div class="modal" id="counter" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog counterdialog">
+			<div class="modal-content countercontent">
+				<!-- Modal footer -->
+				<div class="footer">
+					<h1>
+						1
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- counter Modal Ends-->
     <!-- Note -->
     <blockquote class="blockquote text-center">
         <p class="mb-0">Please accept browser permissions for video and audio. Wait for upto 30 seconds to detect the camera.       </p>
@@ -71,7 +86,7 @@
                 <div class="showurl">
                     <div class="urlcopy">
                         <input type="text" value="https://storage.googleapis.com/tal_interview_app_videos/video_282101918.mp4" id="myInput">
-                        <button id="copytext">
+                        <button id="copytext" onmouseout="outFunc()">
                         <span class="material-icons-outlined">
                         content_copy
                         </span>
@@ -100,7 +115,7 @@
 </div>
     <div class="container recordandupload">
         <div class="row align-items-center ">
-            <div class="col-lg-12 d-md-none mobilerecoder">
+            <div class="col-lg-12 d-lg-none mobilerecoder">
                 
                 
                 
@@ -164,6 +179,7 @@
                                     videocam_off
                                 </span>
                             </button>
+                            
                         </div>
                         <div class="col-lg-12 desktoprecordbtn">
                             <button type="button" class="btn btn-primary" id="record" disabled>Record</button>
